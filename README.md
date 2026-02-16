@@ -1,16 +1,58 @@
+<p align="center">
+  <img src="https://github.com/faciltech/scan-user/assets/3409713/d5c035b9-f723-426a-856b-a472bbfe737d">
+</p>
 <h1 align="center">
   Tiktok-scan - Ferramenta para enumeraçao contas do Tiktok.
 </h1>
-Ferramenta desenvolvida em python, com a finalidade de enumerar contas do Tiktok, trazendo informações de forma rápida e intuítiva.
+<h2>🧠 Principais Funcionalidades</h2>
 
-## Observação importante:
-Deve ter o python instalado no ambiente.
+✔️ Consulta de perfil público
+A ferramenta acessa a página de um usuário do TikTok e extrai os dados disponíveis publicamente.
 
-## 🚀 Por que usa-lo?
+✔️ Coleta de dados de usuário, incluindo:
+<ul>
+  <li>URL da foto de perfil</li>
+  <li>ID da conta e uniqueId</li>
+  <li>Nome do usuário e apelido (nickname)</li>
+  <li>Biografia (bio)</li>
+  <li>País/região e linguagem da conta</li>
+  <li>Quantidade total de seguidores, seguindo, vídeos e corações (likes)</li>
+</ul>
+✔️ Levantamento de vídeos recentes, mostrando para cada vídeo:
+<ul>
+ <li>Descrição</li>
+ <li>URL pública</li>
+ <li>Métricas (visualizações, likes, comentários e compartilhamentos)</li>
+</ul>
+✔️ Exportação de dados
+<ul>
+ <li>Os dados extraídos são salvos em arquivos:</li>
+  <ul>
+   <li>JSON com informações gerais do perfil</li>
+   <li>CSV com métricas dos vídeos recentes</li>
+  </li>
+  </ul>
+</ul>
 
-Muitas vezes precisamos verificar de forma rápida se um determinado usuário no Tiktok, dessa forma, podemos trazer rapidamente na tela de seu terminal as principais informações.
-  
-1.  **Como instalar?**
+<h2>🛠️ Como funciona por baixo dos panos</h2>
+
+A ferramenta faz:
+
+Requisição HTTP ao perfil do TikTok usando o requests.
+
+Parsing do HTML com BeautifulSoup para encontrar dados estruturados JSON no script interno da página.
+
+Converte esse JSON em informações legíveis e práticas para OSINT ou análise básica de perfil público.
+
+<h2>📌 Por que usar?</h2>
+
+👉 Se você precisa verificar rapidamente informações públicas de um perfil do TikTok sem depender de APIs oficiais ou interfaces web manuais, essa ferramenta automatiza e formata esses dados para você.
+
+⚠️ Requisitos e Observações
+
+✔️ Requer Python instalado no sistema.
+✔️ Funciona apenas com perfis públicos (contas privadas ou bloqueadas não retornam dados completos).
+<h2>Como instalar </h2>
 
     Navegue dentro de seu sistema, escolha o local e execute no terminal o comando abaixo.
 
@@ -25,12 +67,14 @@ Muitas vezes precisamos verificar de forma rápida se um determinado usuário no
         Resolving deltas: 100% (1/1), done.
       ```
 
-2.  **Conceda permissão para o arquivo!**
+<h3>Conceda permissão para o arquivo!</h3>
+
 ```
 chmod +x Tiktok-scan.sh
 ```   
+
 <img width="1782" height="326" alt="image" src="https://github.com/user-attachments/assets/ee333dac-6915-45b5-9b0f-bbcc841187d5" />
-....
+
 
 <img width="2890" height="1312" alt="image" src="https://github.com/user-attachments/assets/2b3edb6f-fa59-4d46-9c2e-45d138cf5900" />
 
